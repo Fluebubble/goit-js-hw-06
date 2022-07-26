@@ -31,7 +31,7 @@ function onCreateButtonElClick() {
 }
 
 function onDestroyButtonElClick() {
-
+  divBoxesEl.innerHTML = "";
 }
 
 
