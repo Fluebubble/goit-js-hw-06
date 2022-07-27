@@ -9,7 +9,7 @@ changeBgColorButtonEl.addEventListener("click", onButtonClick);
 
 function onButtonClick() {
 
-  const BACKGROUND_COLOR = getRandomHexColor();
-  document.body.setAttribute("style", `background-color: ${BACKGROUND_COLOR}`);
-  spanColorEl.textContent = BACKGROUND_COLOR;
+  const backgroundColor = getRandomHexColor();
+  document.body.style.backgroundColor = backgroundColor;
+  spanColorEl.textContent = backgroundColor;
 }

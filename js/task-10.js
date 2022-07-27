@@ -12,10 +12,10 @@ const destroyButtonEl = document.querySelector("[data-destroy]");
 destroyButtonEl.addEventListener("click", onDestroyButtonElClick);
 
 const divBoxesEl = document.querySelector("#boxes");
+let boxSize = 30;
 
 function onCreateButtonElClick() {
   let generatedBoxes = [];
-  let boxSize = 30;
   const numberOfNewBoxes = inputFieldEl.value;
 
   for (let i = 0; i < numberOfNewBoxes; i += 1) {
@@ -25,15 +25,11 @@ function onCreateButtonElClick() {
     boxSize += 10;
     }
   divBoxesEl.innerHTML = generatedBoxes.join("");
-  // console.log(inputFieldEl.value);
   console.log(divBoxesEl.innerHTML);
 
 }
 
 function onDestroyButtonElClick() {
   divBoxesEl.innerHTML = "";
+  boxSize = 30;
 }
-
-
-console.log(createButtonEl)
-console.log(inputFieldEl)

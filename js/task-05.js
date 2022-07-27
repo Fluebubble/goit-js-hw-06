@@ -3,6 +3,9 @@ const textEl = document.querySelector("#name-output");
 
 inputFieldEl.addEventListener("input", textChange);
 
-function textChange() {
-    textEl.textContent = inputFieldEl.value;
+function textChange(event) {
+    textEl.textContent = event.currentTarget.value;
+    if (textEl.textContent.length === 0) {
+        textEl.textContent = "Anonymous";
+    }
 }
