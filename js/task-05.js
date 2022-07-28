@@ -4,8 +4,9 @@ const textEl = document.querySelector("#name-output");
 inputFieldEl.addEventListener("input", textChange);
 
 function textChange(event) {
-    textEl.textContent = event.currentTarget.value;
-    if (textEl.textContent.length === 0) {
+    if (inputFieldEl.value.length > 0) {
+        textEl.textContent = event.currentTarget.value;
+    } else {
         textEl.textContent = "Anonymous";
     }
 }

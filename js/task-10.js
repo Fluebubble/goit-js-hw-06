@@ -23,10 +23,9 @@ function onCreateButtonElClick() {
       `<div style = "width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()}"></div>`
       );
     boxSize += 10;
-    }
-  divBoxesEl.innerHTML = generatedBoxes.join("");
-  console.log(divBoxesEl.innerHTML);
-
+  }
+  
+  divBoxesEl.insertAdjacentHTML("beforeend", generatedBoxes.join(""));
 }
 
 function onDestroyButtonElClick() {
